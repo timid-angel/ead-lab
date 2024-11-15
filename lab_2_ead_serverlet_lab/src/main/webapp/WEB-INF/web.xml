@@ -1,0 +1,15 @@
+<!-- Servlet Configuration -->
+
+
+<web-app>
+	<servlet>
+		<servlet-name>abc</servlet-name> //alias
+		<servlet-class>servlet.AddServlets</servlet-class>
+	</servlet>
+	
+	<!-- Servlet Mapping -->
+	<servlet-mapping>
+		<servlet-name>abc</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+</web-app>
