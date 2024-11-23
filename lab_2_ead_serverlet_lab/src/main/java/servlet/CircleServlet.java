@@ -14,36 +14,41 @@ import java.io.PrintWriter;
 @WebServlet("/circle")
 public class CircleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CircleServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter pw = response.getWriter();
-		
-		double radius = Double.parseDouble(request.getParameter("radius"));
-		String unit = request.getParameter("unit");
-		
-		double area = radius * radius * Math.PI;
-		
-		pw.println("<!DOCTYPE html>");
-		pw.println("<html><head> <title> Circle Area Calculator </title> </head> <body>");
-		pw.printf("<h1> Circle Area Calculator Result </h1> <p> Radius: %,.3f %s </p> <p> Area: %,.3f square %s </p>", radius, unit, area, unit);
-		pw.println("</body></html>");	
+	public CircleServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		PrintWriter pw = response.getWriter();
+
+		double radius = Double.parseDouble(request.getParameter("radius"));
+		String unit = request.getParameter("unit");
+
+		double area = radius * radius * Math.PI;
+
+		pw.println("<!DOCTYPE html>");
+		pw.println("<html><head> <title> Circle Area Calculator </title> </head> <body>");
+		pw.printf("<h1> Circle Area Calculator Result </h1> <p> Radius: %,.3f %s </p> <p> Area: %,.3f square %s </p>",
+				radius, unit, area, unit);
+		pw.println("</body></html>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doGet(request, response);
 	}
 

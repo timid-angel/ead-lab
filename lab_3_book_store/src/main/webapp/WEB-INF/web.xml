@@ -1,0 +1,16 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="WebApp_ID" version="6.0">
+	<display-name>BookShoppingWebApp</display-name>
+	<welcome-file-list>
+		<welcome-file>home.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- <servlet>
+		<servlet-name>s1</servlet-name>
+		<servlet-class>com.ead.RegisterServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>s1</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping> -->
+</web-app>
