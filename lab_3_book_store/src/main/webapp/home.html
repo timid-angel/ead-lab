@@ -3,37 +3,57 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" />
   </head>
-  <body class="container-fluid card" style="width: 40rem">
-    <h2 class="bg-danger text-white text-center">Book Registration</h2>
-    <form action="register" method="post">
-      <table class="table table-hover">
-        <tr>
-          <td>Book Name</td>
-          <td><input type="text" name="bookName" /></td>
-        </tr>
-        <tr>
-          <td>Book Edition</td>
-          <td><input type="text" name="bookEdition" /></td>
-        </tr>
-        <tr>
-          <td>Book Price</td>
-          <td><input type="text" name="bookPrice" /></td>
-        </tr>
-        <tr>
-          <td colspan="2" class="text-right">
-            <input
-              type="submit"
-              class="btn btn-info"
-              value="Register"
-              style="margin-right: 10px"
-            />
-            <input type="reset" class="btn btn-danger" value="Cancel" />
-          </td>
-        </tr>
-      </table>
-      <div class="text-center">
-        <a href="booklist" class="btn btn-primary">Book List</a>
+  <body>
+    <div class="container mt-5">
+      <div class="card mx-auto" style="max-width: 40rem">
+        <div class="card-header bg-danger text-white text-center">
+          <h2>Book Registration</h2>
+        </div>
+        <div class="card-body">
+          <form action="register" method="post">
+            <div class="form-group">
+              <label for="bookName">Book Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="bookName"
+                name="bookName"
+              />
+            </div>
+            <div class="form-group">
+              <label for="bookEdition">Book Edition</label>
+              <input
+                type="text"
+                class="form-control"
+                id="bookEdition"
+                name="bookEdition"
+              />
+            </div>
+            <div class="form-group">
+              <label for="bookPrice">Book Price</label>
+              <input
+                type="text"
+                class="form-control"
+                id="bookPrice"
+                name="bookPrice"
+              />
+            </div>
+            <div class="text-right">
+              <button
+                type="submit"
+                class="btn btn-info"
+                style="margin-right: 10px"
+              >
+                Register
+              </button>
+              <button type="reset" class="btn btn-danger">Cancel</button>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <a href="booklist" class="btn btn-primary">Book List</a>
+        </div>
       </div>
-    </form>
+    </div>
   </body>
 </html>

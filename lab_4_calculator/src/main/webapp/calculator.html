@@ -3,23 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Simple Calculator</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Simple Calculator</h1>
-    <form action="OperationServlet" method="get">
-      <input type="number" name="num1" placeholder="Enter number 1" required />
-
-      <input type="number" name="num2" placeholder="Enter number 2" required />
-
-      <select name="Operation">
-        <option value="add">Addition (+)</option>
-        <option value="subtract">Subtraction (-)</option>
-        <option value="multiply">Multiply (*)</option>
-        <option value="divide">Division (/)</option>
-      </select>
-      <br /><br />
-      <input type="submit" value="Calculate" />
-    </form>
+    <div class="container mt-5" style="width: 600px">
+      <h1 class="text-center">Simple Calculator</h1>
+      <form action="OperationServlet" method="get" class="mt-4">
+        <div class="form-group">
+          <input
+            type="number"
+            name="num1"
+            class="form-control"
+            placeholder="Enter number 1"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="num2"
+            class="form-control"
+            placeholder="Enter number 2"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <select name="Operation" class="form-control">
+            <option value="add">Addition (+)</option>
+            <option value="subtract">Subtraction (-)</option>
+            <option value="multiply">Multiply (*)</option>
+            <option value="divide">Division (/)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Calculate
+        </button>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
