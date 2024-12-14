@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="math" class="com.itsc.ioc.springioc.Subject">
+        <constructor-arg value="Maths" />
+    </bean>
+    <bean id="history" class="com.itsc.ioc.springioc.Subject">
+        <constructor-arg value="History" />
+    </bean>
+    <bean id="logic" class="com.itsc.ioc.springioc.Subject">
+        <constructor-arg value="Logic" />
+    </bean>
+
+    <bean id="student" class="com.itsc.ioc.springioc.Student">
+        <constructor-arg name="firstName" value="John" />
+        <constructor-arg name="lastName" value="Doe" />
+        <constructor-arg>
+            <list>
+                <ref bean="math" />
+                <ref bean="history" />
+                <ref bean="logic" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>    

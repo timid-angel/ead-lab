@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="math" class="com.itsc.ioc.springioc.Subject">
+        <property name="subjectName" value="Maths"></property>
+    </bean>
+
+    <bean id="history" class="com.itsc.ioc.springioc.Subject">
+        <property name="subjectName" value="History"></property>
+    </bean>
+
+    <bean id="stdAddr" class="com.itsc.ioc.springioc.Address">
+        <property name="city" value="Addis"></property>
+        <property name="country" value="Ethiopia"></property>
+    </bean>
+
+    <bean id="student" class="com.itsc.ioc.springioc.Student">
+        <property name="firstName" value="John" />
+        <property name="lastName" value="Doe" />
+        <property name="address" ref="stdAddr"></property>
+        <property name="subjects">
+            <list>
+                <ref bean="math" />
+                <ref bean="history" />
+            </list>
+        </property>
+    </bean>
+
+</beans>    
