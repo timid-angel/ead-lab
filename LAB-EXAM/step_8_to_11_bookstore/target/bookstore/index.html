@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="text-center mb-4">
+        <a href="/bookstore/books/addBook" class="btn btn-primary btn-lg">
+          Add a Book
+        </a>
+      </div>
+
+      <hr />
+
+      <div class="text-center mb-4">
+        <a
+          href="/bookstore/books/displayBooks"
+          class="btn btn-secondary btn-lg"
+        >
+          Display Books
+        </a>
+      </div>
+
+      <hr />
+
+      <form action="/bookstore/books/deleteBook" method="post" class="mb-4">
+        <h2>Delete Books</h2>
+        <div class="form-group">
+          <label for="bookID">Book ID:</label>
+          <input type="text" id="bookID" name="id" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+
+      <hr />
+
+      <form action="/bookstore/books/searchBooks" method="get">
+        <h2>Search for Books</h2>
+        <div class="form-group">
+          <label for="searchTerm">Search Term:</label>
+          <input
+            type="text"
+            id="searchTerm"
+            name="description"
+            class="form-control"
+          />
+        </div>
+        <button type="submit" class="btn btn-info">Search</button>
+      </form>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
